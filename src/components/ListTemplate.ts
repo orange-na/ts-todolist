@@ -1,4 +1,4 @@
-import TodoList from "./Todolist";
+import TodoList from "./TodoList.js";
 
 interface DOMDisplay {
   ul: HTMLUListElement;

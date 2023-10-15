@@ -2,8 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo List in TypeScript</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <main>
+      <h1 class="screenContainer">Todo List</h1>
+
+      <section class="newItemInput">
+        <h2 class="screenContainer">New Task</h2>
+        <form class="newItemInput__form" id="itemEntryForm">
+          <label for="newItem" class="screenContainer">Enter a new task</label>
+          <input
+            class="newItemInput__input"
+            id="newItem"
+            type="text"
+            maxlength="40"
+            autocomplete="off"
+            placeholder="Add task"
+          />
+          <button
+            id="addItem"
+            class="button newItemInput__button"
+            title="Add new task"
+            aria-label="Add new task to list"
+          >
+            +
+          </button>
+        </form>
+      </section>
+
+      <section class="listContainer">
+        <header class="listTitle">
+          <h2 id="listName">Todo List</h2>
+          <button
+            id="clearItemsButton"
+            class="button listTitle__button"
+            title="Clear the list"
+            aria-label="Remove all tasks from the list"
+          >
+            Clear
+          </button>
+        </header>
+        <hr />
+        <ul id="listItems"></ul>
+      </section>
+    </main>
+    <script type="module" src="./dist/main.js" defer></script>
+  </body>
 </html>
